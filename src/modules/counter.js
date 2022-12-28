@@ -1,8 +1,8 @@
-const INCRESE = "counter/INCRESE";
-const DECRESE = "counter/DECRESE";
+const INCREASE = "counter/INCREASE";
+const DECREASE = "counter/DECREASE";
 
-export const increse = () => ({ type: INCRESE });
-export const decrese = () => ({ type: DECRESE });
+export const increase = () => ({ type: INCREASE });
+export const decrease = () => ({ type: DECREASE });
 
 const initialState = {
   number: 0,
@@ -10,12 +10,12 @@ const initialState = {
 
 function counter(state = initialState, action) {
   switch (action.type) {
-    case INCRESE:
+    case INCREASE:
       return {
         ...state,
         number: state.number + 1,
       };
-    case DECRESE:
+    case DECREASE:
       return {
         ...state,
         number: state.number - 1,

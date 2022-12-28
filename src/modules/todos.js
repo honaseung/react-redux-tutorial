@@ -4,13 +4,13 @@ const TOGGLE = "todos/TOGGLE";
 const REMOVE = "todos/REMOVE";
 
 let id = 3;
-export const change_input = (input) => ({ type: CHANGE_INPUT, input });
-export const insert = (text) => ({
+export const onChangeInput = (input) => ({ type: CHANGE_INPUT, input });
+export const onInsert = (text) => ({
   type: INSERT,
   todo: { id: id++, text, done: false },
 });
-export const toggle = (id) => ({ type: TOGGLE, id });
-export const remove = (id) => ({ type: REMOVE, id });
+export const onToggle = (id) => ({ type: TOGGLE, id });
+export const onRemove = (id) => ({ type: REMOVE, id });
 
 const initialState = {
   input: "",
